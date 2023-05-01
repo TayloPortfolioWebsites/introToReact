@@ -119,6 +119,45 @@
        document.getElementById('hero1').innerHTML = favoriteHero1();
        document.getElementById('hero2').innerHTML = favoriteHero2();
        document.getElementById('hero3').innerHTML = favoriteHero3();
+
+       /* EXAMPLE FOR ARRAY METHODS .map()
+       const fruitArray = ['mango','banana','orange'];
+       const fruits = fruitArray.map((item)=><p>{item}</p>);
+
+       ReactDOM.render(fruits,document.getElementById('testDiv'));
+       */
+
+        /* DESTRUCTURING ARRAYS
+        old way for assigning array
+        const hero = ['one piece','marvel','dc'];
+
+        const zorro = hero[0];
+        const spiderman = hero[1];
+        const batman = hero[2];
+        */
+
+        /* new approach DESTRUCTURING
+        const hero = ['one piece ','marvel ','dc '];
+
+        const [zorro,spiderman,batman] = hero;
+
+        document.write(zorro, spiderman, batman);
+        */
+
+        function calc(a,b){
+            const add = a+b;
+            const subtract = a-b;
+            const multiply = a*b;
+            const divide = a/b;
+
+            return [add, subtract, multiply, divide];
+        }
+        const [add, subtract, multiply, divide] = calc(4,5);
+
+        document.write('<p>Sum: ' + add + '</p>');
+        document.write('<p>Difference: ' + subtract + '</p>');
+        document.write('<p>Product: ' + multiply + '</p>');
+        document.write('<p>Quotient: ' + divide + '</p>');
     </script>
 </body>
 </html>
