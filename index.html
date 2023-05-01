@@ -286,7 +286,6 @@
         function Welcome(){
             return <h1>REACT FUNCTION COMPONENT</h1>;
         }
-        
         ReactDOM.render(<Welcome/>, document.getElementById('testDiv'));
 
         /* CLASS COMPONENTS */
@@ -295,13 +294,11 @@
                 return (<h1> THIS IS A CLASS BASED COMPONENT</h1>)
             }
         }
-
         ReactDOM.render(<Welcome2/>, document.getElementById('testDiv2'));
 
         function Welcome3(props){
             return <h1>Hello {props.name}!</h1>
         }
-
         ReactDOM.render(<Welcome3 name='Ven'/>, document.getElementById('testDiv3'));
 
         class Welcome4 extends React.Component{
@@ -309,13 +306,11 @@
                 return (<h1>Hello {this.props.name}</h1>);
             }
         }
-
         ReactDOM.render(<Welcome4 name="Test props in a class component"/>,document.getElementById('testDiv4'));
 
         function Child(){
             return <h2>I am a Child function based component.</h2>
         }
-
         function Parent(){
             return (
                 <>
@@ -325,9 +320,7 @@
 
             )
         }
-
         ReactDOM.render(<Parent/>,document.getElementById('testDiv5'));
-
     </script>
 
     <script type="module">
