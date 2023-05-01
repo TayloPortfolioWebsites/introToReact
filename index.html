@@ -55,6 +55,14 @@
     <!------------------------------- REACT CODE ------------------------>
     <div id="testDiv">HELLO WORLD!</div>
     <p id="name"></p>
+    <header id="firstColumn"></header>
+    <div id="firstJSX"></div>
+    <div id="firstJSX2"></div>
+    <div id="firstJSX3"></div>
+    <div id="firstJSX4"></div>
+    <div id="firstJSX5"></div>
+    <div id="firstJSX6"></div>
+    <div id="firstJSX7"></div>
 
     <script type="text/babel">
         /* EXAMPLE 1
@@ -193,6 +201,73 @@
         const dogCat = {...dog, ...cat};
         console.log(dogCat);
         */
+
+        const table = (
+            <table>
+                <tr>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td>Tiff</td>
+                </tr>
+                <tr>
+                    <td>Ven</td>
+                </tr>
+                <tr>
+                    <td>Hazel</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                </tr>    
+            </table>
+        )
+        
+        const myJSX = <h1>INTRO TO JSX</h1>
+        const root1 = ReactDOM.createRoot(document.getElementById('firstJSX'));
+        root1.render(myJSX);
+        
+
+        const myJSX2 = <h1>Add two numbers with the sum of: {5+5} to display our JSX 2 example</h1>
+        const root2 = ReactDOM.createRoot(document.getElementById('firstJSX2'));
+        root2.render(myJSX2);
+
+        const list = (
+            <ul>
+                <li>Apple</li>
+                <li>Tree</li>
+                <li>Fruits</li>
+                <li>Mango</li>
+            </ul>
+        );
+        const root3 = ReactDOM.createRoot(document.getElementById('firstJSX3'));
+        root3.render(list);
+
+        const parent = (
+            <div>
+                <p>Child paragraph 1</p>
+                <p>Child paragraph 2</p>
+            </div>
+        );
+        const root4 = ReactDOM.createRoot(document.getElementById('firstJSX4'));
+        root4.render(parent);
+
+        const fragment = (
+            <div>
+                <p>Fragment Child paragraph 1</p>
+                <p>Fragment Child paragraph 2</p>
+            </div>
+        );
+        const root5 = ReactDOM.createRoot(document.getElementById('firstJSX5'));
+        root5.render(fragment);
+
+        const forwardSlash = <input type='text' />
+        const root6 = ReactDOM.createRoot(document.getElementById('firstJSX6'));
+        root6.render(forwardSlash);
+
+        const className = <h1 className="cssClass">Hello CSS! CLASSNAME</h1>
+        const root7 = ReactDOM.createRoot(document.getElementById('firstJSX7'));
+        root6.render(className);
+
     </script>
     <script type="module">
         import {name,age} from '/main.js';
